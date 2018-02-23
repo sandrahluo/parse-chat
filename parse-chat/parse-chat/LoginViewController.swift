@@ -73,7 +73,6 @@ class LoginViewController: UIViewController {
         // ?? = nil coalescing operator
         let username = usernameField.text ?? ""
         let password = passwordField.text ?? ""
-        
         PFUser.logInWithUsername(inBackground: username, password: password) { (user: PFUser?, error: Error?) in
             if let error = error {
                 print("User log in failed:\(error.localizedDescription)")
@@ -84,8 +83,6 @@ class LoginViewController: UIViewController {
             
         }
     }
-    
-
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -37,7 +37,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <action selector="onLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ikC-h9-oHC"/>
+                                    <action selector="onLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="36d-et-Lu4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grF-md-7az">
@@ -60,7 +60,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="loginButton" destination="H5L-kF-3zJ" id="HJF-vp-7mX"/>
+                        <outlet property="loginButton" destination="H5L-kF-3zJ" id="Woh-ea-x9r"/>
                         <outlet property="passwordField" destination="cAe-lM-Bn7" id="bv4-St-jjw"/>
                         <outlet property="signupButton" destination="grF-md-7az" id="hoV-UT-tTG"/>
                         <outlet property="usernameField" destination="1AT-Vj-j4A" id="3eO-9i-tsf"/>
@@ -69,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-94" y="37"/>
+            <point key="canvasLocation" x="-95.200000000000003" y="36.431784107946029"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="LFO-lO-2KV">
