@@ -16,41 +16,54 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        let alertController = UIAlertController(title: "Incomplete Fields", message: "Please enter a username and password", preferredStyle: .alert)
-        
-        // create a cancel action
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
-            // handle cancel response here. Doing nothing will dismiss the view.
-        }
-        // add the cancel action to the alertController
-        alertController.addAction(cancelAction)
-        
-        // create an OK action
-        let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
-            // handle response here.
-        }
-        // add the OK action to the alert controller
-        alertController.addAction(OKAction)
-        
-        if ((usernameField.text?.isEmpty)! || (passwordField.text?.isEmpty)!) {
-        present(alertController, animated: true) {
-            // optional code for what happens after the alert controller has finished presenting
-        }
-        }
-        
-    }
-    
     // when signup button is pressed
     @IBAction func onSignup(_ sender: Any) {
-        registerUser()
+        if ((usernameField.text?.isEmpty)! || (passwordField.text?.isEmpty)!) {
+            let alertController = UIAlertController(title: "Incomplete Fields", message: "Please enter a username and password", preferredStyle: .alert)
+            
+            // create a cancel action
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+                // handle cancel response here. Doing nothing will dismiss the view.
+            }
+            // add the cancel action to the alertController
+            alertController.addAction(cancelAction)
+            
+            // create an OK action
+            let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                // handle response here.
+            }
+            // add the OK action to the alert controller
+            alertController.addAction(OKAction)
+            present(alertController, animated: true)
+        }
+        else {
+            registerUser()
+        }
     }
     
     // when login button is pressed
     @IBAction func onLogin(_ sender: Any) {
-        loginUser()
+        if ((usernameField.text?.isEmpty)! || (passwordField.text?.isEmpty)!) {
+            let alertController = UIAlertController(title: "Incomplete Fields", message: "Please enter a username and password", preferredStyle: .alert)
+            
+            // create a cancel action
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+                // handle cancel response here. Doing nothing will dismiss the view.
+            }
+            // add the cancel action to the alertController
+            alertController.addAction(cancelAction)
+            
+            // create an OK action
+            let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                // handle response here.
+            }
+            // add the OK action to the alert controller
+            alertController.addAction(OKAction)
+            present(alertController, animated: true)
+        }
+        else {
+            loginUser()
+        }
     }
     
     func registerUser() {
@@ -82,6 +95,10 @@ class LoginViewController: UIViewController {
             }
             
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
     
     override func didReceiveMemoryWarning() {
