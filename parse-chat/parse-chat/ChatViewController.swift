@@ -37,13 +37,14 @@ class ChatViewController: UIViewController, UITableViewDataSource {
         chatMessage.saveInBackground{ (success, error) in
             if success {
                 print("the message was saved!")
+                // clear the text from chat field after message is saved
+                self.messageField.text = ""
+
             }
             else if let error = error {
                 print("Problem saving message: \(error.localizedDescription)")
             }
         }
-        // clear the text from chat field after message is saved
-        chatMessage["text"] = ""
     }
     
     // required function for UITableViewDelegate protocol

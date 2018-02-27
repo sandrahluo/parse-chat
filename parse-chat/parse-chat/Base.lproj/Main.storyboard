@@ -81,14 +81,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JG9-lg-UPc">
-                                <rect key="frame" x="16" y="80" width="273" height="30"/>
+                                <rect key="frame" x="16" y="80" width="287" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AmM-Vv-S0K">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AmM-Vv-S0K">
                                 <rect key="frame" x="0.0" y="125" width="375" height="542"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="chatCell" rowHeight="70" id="HND-kL-FKA" customClass="chatCell" customModule="parse_chat" customModuleProvider="target">
@@ -127,7 +126,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXt-rT-K4q">
-                                <rect key="frame" x="311" y="80" width="36" height="30"/>
+                                <rect key="frame" x="323" y="80" width="36" height="30"/>
                                 <state key="normal" title="Send"/>
                                 <connections>
                                     <action selector="sendPressed:" destination="SJg-QY-Lr5" eventType="touchUpInside" id="ELQ-WN-lUk"/>
@@ -137,15 +136,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="JG9-lg-UPc" firstAttribute="top" secondItem="sa2-mc-NXa" secondAttribute="top" constant="16" id="4DB-OB-BjS"/>
-                            <constraint firstItem="CXt-rT-K4q" firstAttribute="leading" secondItem="JG9-lg-UPc" secondAttribute="trailing" constant="16" id="EEb-Zb-4A0"/>
-                            <constraint firstItem="sa2-mc-NXa" firstAttribute="trailing" secondItem="CXt-rT-K4q" secondAttribute="trailing" constant="16" id="Mwk-6c-Hsl"/>
                             <constraint firstItem="sa2-mc-NXa" firstAttribute="trailing" secondItem="CXt-rT-K4q" secondAttribute="trailing" constant="16" id="OLf-e6-Rut"/>
                             <constraint firstItem="JG9-lg-UPc" firstAttribute="leading" secondItem="sa2-mc-NXa" secondAttribute="leading" constant="16" id="Xeu-cF-ZsG"/>
                             <constraint firstItem="CXt-rT-K4q" firstAttribute="top" secondItem="sa2-mc-NXa" secondAttribute="top" constant="16" id="YeE-1E-Cpz"/>
+                            <constraint firstItem="CXt-rT-K4q" firstAttribute="leading" secondItem="JG9-lg-UPc" secondAttribute="trailing" constant="16" id="iQK-bt-deg"/>
+                            <constraint firstItem="AmM-Vv-S0K" firstAttribute="top" secondItem="JG9-lg-UPc" secondAttribute="bottom" constant="16" id="z9n-u6-mtN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sa2-mc-NXa"/>
                     </view>
-                    <navigationItem key="navigationItem" id="mae-Ut-IlE"/>
+                    <navigationItem key="navigationItem" title="Chat" id="mae-Ut-IlE"/>
                     <connections>
                         <outlet property="chatTable" destination="AmM-Vv-S0K" id="zjJ-FU-v52"/>
                         <outlet property="messageField" destination="JG9-lg-UPc" id="xef-I0-PZx"/>
