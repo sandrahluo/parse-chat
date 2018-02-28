@@ -37,6 +37,9 @@ class ChatViewController: UIViewController, UITableViewDataSource {
         chatMessage.saveInBackground{ (success, error) in
             if success {
                 print("the message was saved!")
+                // fetch messages to display the message that was just sent
+                self.fetchMessages()
+                self.messageField.text = ""
             }
             else if let error = error {
                 print("Problem saving message: \(error.localizedDescription)")
